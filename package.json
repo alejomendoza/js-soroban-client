@@ -136,6 +136,7 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
+    "@haverstack/axios-fetch-adapter": "^0.8.0",
     "axios": "^1.4.0",
     "bignumber.js": "^9.1.1",
     "buffer": "^6.0.3",

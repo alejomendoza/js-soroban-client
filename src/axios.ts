@@ -1,4 +1,6 @@
 import axios, { AxiosResponse } from "axios";
+import fetchAdapter from "@haverstack/axios-fetch-adapter";
+
 import URI from "urijs";
 
 /* tslint:disable-next-line:no-var-requires */
@@ -24,6 +26,7 @@ export interface ServerTime {
 export const SERVER_TIME_MAP: Record<string, ServerTime> = {};
 
 const AxiosClient = axios.create({
+  adapter: fetchAdapter,
   headers: {
     "X-Client-Name": "js-soroban-client",
     "X-Client-Version": version,
